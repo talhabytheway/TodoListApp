@@ -2,6 +2,10 @@
 
 This is a simple TODO list app that allows users to create and manage multiple lists of tasks.
 
+## Technologies
+- React
+- Redux
+
 ## Features
 
 - Create and manage multiple lists of tasks
