@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         mr: ["Mriya Grotesk", "sans-serif"],
-        st: ["Stint", "cursive"],
+        st: ["Stint Ultra Condensed", "cursive"],
       },
     },
   },

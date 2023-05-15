@@ -3,8 +3,59 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  /* Define CSS variables for each theme color */
+  --Vintage: #2d4659;
+  --Cosmic: #f0eb8d;
+  --Rustic: #ea5455;
+  --Sunset: #210062;
+  --Industrial: #f45050;
+  --Blackout: #f3efe0;
+  --Vibrant: #4a0e5c;
+  --Coastal: #005874;
+  --Oceanic: #cbe4de;
+}
 
+.Vintage:after {
+  background: var(--Vintage);
+}
+
+.Cosmic:after {
+  background: var(--Cosmic);
+}
+
+.Rustic:after {
+  background: var(--Rustic);
+}
+
+.Sunset:after {
+  background: var(--Sunset);
+}
+
+.Industrial:after {
+  background: var(--Industrial);
+}
+
+.Blackout:after {
+  background: var(--Blackout);
+}
+
+.Vibrant:after {
+  background: var(--Vibrant);
+}
+
+.Coastal:after {
+  background: var(--Coastal);
+}
+
+.Oceanic:after {
+  background: var(--Oceanic);
+}
+.Orange:after {
+  background: #ff6600;
+}
+
+:root {
+  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,4 +80,21 @@
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bar:hover:after {
+  width: 100%;
+}
+
+.bar:after {
+  bottom: 10%;
+  content: "";
+  display: block;
+  height: 25%;
+  z-index: -10;
+  position: absolute;
+  -webkit-transition: width 1s ease 0s, right 0.5s ease 0s;
+  -moz-transition: width 1s ease 0s, right 0.5s ease 0s;
+  transition: width 1s ease 0s, right 0.5s ease 0s;
+  width: 10%;
 }
