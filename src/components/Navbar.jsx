@@ -13,7 +13,7 @@ function Navbar({ bg = "#232020", accent = "#4f4c4b" }) {
         backgroundPosition: "0 0, 15px 15px",
       }}
     >
-      <Link to="/">
+      <Link to="/" className="inline-block w-[48px]">
         <Svg width={48} className="z-[1000] shadow-lg" />
       </Link>
     </nav>
