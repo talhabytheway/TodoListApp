@@ -73,17 +73,12 @@ function reducer(state = initialState, action) {
       };
     }
     case actionTypes.EDIT_LIST: {
-      const { listId, name, theme } = action.payload;
+      const { id, name, theme } = action.payload;
+      const deepCopyState = JSON.parse(JSON.stringify(state));
+      deepCopyState.lists[id].name = name;
+      deepCopyState.lists[id].theme = theme;
       return {
-        ...state,
-        lists: {
-          ...state.lists,
-          [listId]: {
-            ...state.lists[listId],
-            name,
-            theme: themes[theme],
-          },
-        },
+        ...deepCopyState,
       };
     }
     case actionTypes.EDIT_TASK: {
