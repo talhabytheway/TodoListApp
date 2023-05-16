@@ -13,6 +13,15 @@
   --Vibrant: #4a0e5c;
   --Coastal: #005874;
   --Oceanic: #cbe4de;
+  --VintageAcc: #819f7f;
+  --CosmicAcc: #8f43ee;
+  --RusticAcc: #e4bd7d;
+  --SunsetAcc: #77037b;
+  --IndustrialAcc: #f9d949;
+  --BlackoutAcc: #22a39f;
+  --VibrantAcc: #bca3ca;
+  --CoastalAcc: #ffbe00;
+  --OceanicAcc: #2e4f4f;
 }
 
 .Vintage:after {
@@ -54,6 +63,45 @@
   background: #ff6600;
 }
 
+.VintageAcc:after {
+  background: var(--VintageAcc);
+}
+
+.CosmicAcc:after {
+  background: var(--CosmicAcc);
+}
+
+.RusticAcc:after {
+  background: var(--RusticAcc);
+}
+
+.SunsetAcc:after {
+  background: var(--SunsetAcc);
+}
+
+.IndustrialAcc:after {
+  background: var(--IndustrialAcc);
+}
+
+.BlackoutAcc:after {
+  background: var(--BlackoutAcc);
+}
+
+.VibrantAcc:after {
+  background: var(--VibrantAcc);
+}
+
+.CoastalAcc:after {
+  background: var(--CoastalAcc);
+}
+
+.OceanicAcc:after {
+  background: var(--OceanicAcc);
+}
+.OrangeAcc:after {
+  background: #ff6600;
+}
+
 :root {
   color-scheme: light dark;
   font-synthesis: none;
@@ -85,6 +133,15 @@
 .bar:hover:after {
   width: 100%;
 }
+.barFul:after {
+  width: 100%;
+  bottom: 10%;
+  content: "";
+  display: block;
+  height: 25%;
+  z-index: -10;
+  position: absolute;
+}
 
 .bar:after {
   bottom: 10%;
@@ -96,5 +153,5 @@
   -webkit-transition: width 1s ease 0s, right 0.5s ease 0s;
   -moz-transition: width 1s ease 0s, right 0.5s ease 0s;
   transition: width 1s ease 0s, right 0.5s ease 0s;
-  width: 10%;
+  width: 50px;
 }

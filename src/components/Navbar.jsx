@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar({ bg = "#232020", accent = "#4f4c4b" }) {
   return (
     <nav
-      className="sticky top-0 left-0 p-4 md:p-6 w-full md:h-24"
+      className="sticky top-0 left-0 p-4 md:p-6 w-full md:h-24 z-[1000]"
       style={{
         backgroundImage: `radial-gradient(${accent} 1.5px, transparent 1.5px), radial-gradient(${accent} 1.5px, transparent 1.5px)`,
         backgroundColor: bg,
