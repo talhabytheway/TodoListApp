@@ -62,11 +62,11 @@ function reducer(state = initialState, action) {
           [listId]: {
             ...state?.lists[listId],
             tasks: {
-              ...state?.lists[listId]?.tasks,
               [generateRandomString()]: {
                 name,
                 completed: false,
               },
+              ...state?.lists[listId]?.tasks,
             },
           },
         },
@@ -88,18 +88,11 @@ function reducer(state = initialState, action) {
     }
     case actionTypes.EDIT_TASK: {
       const { listId, taskId, name } = action.payload;
+      const deepCopyState = JSON.parse(JSON.stringify(state));
+      deepCopyState.lists[listId].tasks[taskId].name = name;
+      console.log(action.payload);
       return {
-        ...state,
-        lists: {
-          ...state?.lists,
-          [listId]: {
-            ...state?.lists[listId],
-            [taskId]: {
-              ...state?.lists[listId][taskId]?.completed,
-              name,
-            },
-          },
-        },
+        ...deepCopyState,
       };
     }
     case actionTypes.MARK_COMPLETED: {
