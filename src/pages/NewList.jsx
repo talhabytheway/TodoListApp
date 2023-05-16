@@ -47,25 +47,46 @@ const NewList = () => {
       }}
     >
       <Navbar bg={currTheme?.background} accent={currTheme?.accent} />
-      <form onSubmit={() => addList(event, currTheme)}>
-        <input type="text" name="text" />
-        <h1>NewList</h1>
-        <p>{JSON.stringify(currTheme)} current theme</p>
-        {Object.keys(theme).map((themeName) => (
-          <p
-            key={themeName}
-            onClick={() => handleTheme(themeName)}
-            style={{
-              backgroundColor: theme[themeName].background,
-              color: theme[themeName].primary,
-              borderColor: theme[themeName].accent,
-            }}
-            className={`cursor-pointer font-black no-select inline-block px-9 py-3 m-4 rounded-full border-8`}
-          >
-            {themeName}
-          </p>
-        ))}
-        <button type="submit">Add List</button>
+      <form
+        onSubmit={() => addList(event, currTheme)}
+        className="flex flex-col justify-center items-center gap-10 py-10 font-mr font-black"
+      >
+        <input
+          type="text"
+          name="text"
+          style={{
+            backgroundColor: currTheme?.background || "#232020",
+            borderColor: currTheme?.accent || "#FF7315",
+            color: currTheme?.primary || "#F4F4F4",
+          }}
+          className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[45%] inline-block focus-visible:outline-none rounded-full border-[5px] py-[10px] px-[14px] lg:py-[12px] md:px-[24px] lg:px-[36px] text-[18px] md:text-[24px] lg:text-[30px]"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {Object.keys(theme).map((themeName) => (
+            <p
+              key={themeName}
+              onClick={() => handleTheme(themeName)}
+              style={{
+                backgroundColor: theme[themeName].background,
+                color: theme[themeName].primary,
+                borderColor: theme[themeName].accent,
+              }}
+              className={`cursor-pointer text-center font-black no-select inline-block px-9 py-3 m-4 rounded-full border-[5px]`}
+            >
+              {themeName}
+            </p>
+          ))}
+        </div>
+        <button
+          type="submit"
+          style={{
+            color: currTheme?.background || "#232020",
+            backgroundColor: currTheme?.accent || "#FF7315",
+          }}
+          className="text-[18px] md:text-[24px] lg:text-[30px] rounded-full px-8 py-4"
+        >
+          Add List
+        </button>
       </form>
     </div>
   );
