@@ -90,7 +90,6 @@ function reducer(state = initialState, action) {
       const { listId, taskId, name } = action.payload;
       const deepCopyState = JSON.parse(JSON.stringify(state));
       deepCopyState.lists[listId].tasks[taskId].name = name;
-      console.log(action.payload);
       return {
         ...deepCopyState,
       };
