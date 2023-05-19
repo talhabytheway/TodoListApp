@@ -13,7 +13,7 @@ const persistor = persistStore(store);
 
 function App() {
   return (
-    <div className="pattern app relative font-st">
+    <div className="pattern app relative font-st text-[#F4F4F4]">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter>
